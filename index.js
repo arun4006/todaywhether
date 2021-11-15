@@ -101,6 +101,6 @@ app.get('/help/*',(req,res)=>{
 })
 
 app.listen(6586, () => {
-    console.log('The web server has started on the port :'+port);
+    console.log('The Web server has started on the port :'+port);
     console.log(__dirname);
 });
