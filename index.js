@@ -16,7 +16,7 @@ const partialspath=path.join(__dirname,'template/partials')
 app.set("views",viewpath);
 hbs.registerPartials(partialspath) 
 
-app.get('/main', (req, res) => {
+app.get('/', (req, res) => {
     res.render('main',{
         title:'main',
         name:'arunkumar'
