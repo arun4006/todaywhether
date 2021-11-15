@@ -100,7 +100,7 @@ app.get('/help/*',(req,res)=>{
     })
 })
 
-app.listen(6586, () => {
+app.listen(port, () => {
     console.log('The Web server has started on the port :'+port);
     console.log(__dirname);
 });
