@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <!-- <meta> tags> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"   href="../css/mysytle.css">
+    <link rel="icon" href="https://play-lh.googleusercontent.com/gd7vl3Bb-PPYSzae1LJSO3gsuhY5u6vlpbB2CPa-sC5MzWVZo9zo4Q1ImKbrbbDGtA">
+    <title>home</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>I am  Home Handlebars</h1>
+        {{>header}}
+        {{>footer}}
+    </div>
+   
+</div><div class="posts">
+    <div class="row justify-content-center">
+        <div class="col-lg-7" style="margin-top: 50px;">
+            <div class="card">
+
+                <img src="{{post.image}}"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Posted by {{post.author}}</h5>
+
+                  {{#if post.comments}}
+                    <ul class="list-group">
+                        {{#each post.comments}}
+                        <li class="list-group-item">{{this}}</li>
+                        {{/each}}
+                    </ul>
+                    {{else}}
+                    <ul class="list-group">
+                        <li class="list-group-item">Be first to comment on this post</li>
+                    </ul>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
