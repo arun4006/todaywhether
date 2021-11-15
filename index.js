@@ -6,6 +6,7 @@ const path=require('path')
 const geocode=require('./utils/geocode')
 const forecast=require('./utils/forecast');
 const { error } = require('console');
+const port=process.env.PORT || 6586;
 
 app.use(express.static('template'))
 
@@ -100,6 +101,6 @@ app.get('/help/*',(req,res)=>{
 })
 
 app.listen(6586, () => {
-    console.log('The web server has started on port 6586');
+    console.log('The web server has started on port :'+port);
     console.log(__dirname);
 });
